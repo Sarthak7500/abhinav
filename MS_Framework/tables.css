@@ -1,0 +1,54 @@
+/* === BASE TABLE === */
+.table {
+    width: auto;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  table-layout: auto;
+  overflow: auto;
+
+}
+
+/* === STRIPED TABLE === */
+.table-striped tbody tr:nth-child(odd) {
+  background-color: var(--striped-bg, #00c445); /* default fallback */
+}
+
+
+/* === HOVERABLE ROWS === */
+.table-hover tbody tr:hover {
+  background-color: var(--table-hover-bg, #f1f1f1); /* fallback */
+}
+
+/* === RESPONSIVE WRAPPER === */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* === CELL PADDING === */
+.table th, 
+.table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/* === ALIGNMENT UTILS === */
+.left th, .left td {
+  text-align: left;
+}
+.center th, .center td {
+  text-align: center;
+}
+.right th, .right td {
+  text-align: right;
+}
+
+/* === RESPONSIVE FONT SIZE === */
+@media (max-width: 768px) {
+  .table {
+    font-size: 0.9rem;
+  }
+}

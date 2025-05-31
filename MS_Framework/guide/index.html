@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="../mystyle.css">
+  <script src="https://cdn.jsdelivr.net/gh/Sarthak7500/MyStyle@main/js/mystyle.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="lt-blue">
+
+    <style>
+         /* width */
+ ::-webkit-scrollbar {
+    width: 8px;
+    height: 12px;
+  }
+  ::-webkit-scrollbar:hover {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 0px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: grey; 
+    border-radius: 10px;
+    padding-right: 15px; /* Adjust as needed */
+    padding-bottom: 20px;
+  
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #237ef5; 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    padding-right: 5px; /* Adjust as needed */
+  }
+
+  /* Track */
+ .sidebar-1::-webkit-scrollbar-track {
+    border-radius: 30px;
+    background: rgb(210, 210, 210);
+  }
+   
+  /* Handle */
+  .sidebar-1::-webkit-scrollbar-thumb {
+    background: grey; 
+    border-radius: 10px;
+    padding-right: 15px; /* Adjust as needed */
+    padding-bottom: 20px;
+  }
+
+  .sidebar-1::-webkit-scrollbar {
+    width: 12px;
+    background: transparent;
+    height: 12px;
+    border-radius: 30px;
+  }
+   
+    </style>
+
+  <div class="main">
+
+    <div class="element-fx circle w-150px anime-float-dig h-150px dk-red mt-150 ml-100"></div>
+    <div class="element-fx w-150px h-150px rd-4 pc anime-float-ver blue mt-300 ml-1200"></div>
+    <div class="element-fx rombus w-200px anime-rotate-infinite-slow h-200px green mt-500 ml-300"></div>
+
+    <!------- Nav Bar------>
+
+    <nav class="nav rd-bottom fixed lt-blue blur-2">
+      <a href="#" class="logo-txt bold txt-dk-blue">MyStyle</a>
+
+      <div onclick="lay(1)" class="menu-bar"><i class="fa fa-bars txt-black"></i>
+      </div>
+      
+      <ul class="ul-menu">
+        <li class="li-menu txt-dk-blue hover-br "><a href="../index.html"><i class="fa fa-home"></i> Home</a> <div class="line dk-blue"></div></li>
+        
+        <li class="li-menu txt-dk-blue hover-br active-br"><a href="#"><i class="fa fa-book"></i> Guide</a><div class="line dk-blue"></div></li>
+        <li class="li-menu txt-dk-blue hover-br"><a href="#"><i class="fa fa-user"></i> Contact</a><div class="line dk-blue"></div></li>
+
+        <div class="theme-toggle-btn tr-black rd-3 br-black m-10">
+          <input type="checkbox" id="theme-toggle" class="theme-toggle " onchange="toggleTheme()" />
+          <label for="theme-toggle" class="toggle-label">
+            <span class="toggle-icon sun">🌞</span>
+            <span class="toggle-icon moon">🌙</span>
+            <span class="toggle-slider black"></span>
+          </label>
+        </div>
+
+      </ul>
+    </nav>
+
+    <div id="mobile-menu" class="mobile-menu sh-2 fx-top-right center white txt-black rd-left">
+      <ul class="ul f30 mt-200 w-100">
+        <li class="li txt-dk-blue"><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
+        <li class="li txt-dk-blue"><a href="#"><i class="fa fa-book"></i> Guide</a></li>
+        <li class="li txt-dk-blue"><a href="#"><i class="fa fa-user"></i> Contact</a></li>
+
+        <div class="theme-toggle-btn tr-black rd-3 br-black m-40">
+          <input type="checkbox" id="theme-toggle" class="theme-toggle " onchange="toggleTheme()" />
+          <label for="theme-toggle" class="toggle-label">
+            <span class="toggle-icon sun">🌞</span>
+            <span class="toggle-icon moon">🌙</span>
+            <span class="toggle-slider black"></span>
+          </label>
+        </div>
+
+      </ul>
+    </div>
+
+    <div id = "menulay" onclick="lay(0)" class="menulay blur-1"></div>
+
+    <!-------------- Side bar------------------>
+    
+
+    <div class="sidebar-1 w-200px mt-120 txt-black h-80vh pl-60 f20 left fixed overy-scroll">
+       
+         <a href="#start"><li class="mt-10 pb-0 w-90  hover-br nostyle">Get Start <div class="line dk-blue mt-5 p-0"></div></li>
+          </a>
+        <a href="#width"><li class=" mt-10 pb-0 w-90  hover-br nostyle">Width <div class="line dk-blue mt-5 p-0"></div></li></a>
+        <a href="#height"><li class=" mt-10 pb-0 w-90  hover-br nostyle">Height<div class="line dk-blue mt-5 p-0"></div></li></a>
+        <a href="#containers"><li class=" mt-10 pb-0 w-90  hover-br nostyle">Containers<div class="line dk-blue mt-5 p-0"></div></li></a>
+        <a href="#cards"><li class=" mt-10 pb-0 w-90  hover-br nostyle">Cards <div class="line dk-blue mt-5 p-0"></div></li></a>
+        <a href="#display"><li class=" mt-10 pb-0 w-90  hover-br nostyle">Display <div class="line dk-blue mt-5 p-0"></div></li></a>
+        <a href="#grids"><li class=" mt-10 pb-0 w-90  hover-br nostyle">Grids<div class="line dk-blue mt-5 p-0"></div></li></a>
+        <a href="#border"><li class=" mt-10 pb-0 w-90  hover-br nostyle">Border<div class="line dk-blue mt-5 p-0"></div></li></a>
+        <a href="#background"><li class=" mt-10 pb-0 w-90  hover-br nostyle">Background<div class="line dk-blue mt-5 p-0"></div></li></a>
+        <a href="#fonts"><li class=" mt-10 pb-0 w-90  hover-br nostyle">Fonts<div class="line dk-blue mt-5 p-0"></div></li></a>
+        <a href="#fontfamily"><li class=" mt-10 pb-0 w-90  hover-br nostyle">Fonts Family<div class="line dk-blue mt-5 p-0"></div></li></a>
+        <a href="#shapes"><li class=" mt-10 pb-0 w-90  hover-br nostyle">Shapes<div class="line dk-blue mt-5 p-0"></div></li></a>
+        <a href="#margin"><li class=" mt-10 pb-0 w-90  hover-br nostyle">Margin<div class="line dk-blue mt-5 p-0"></div></li></a>
+        <a href="#animations"><li class=" mt-10 pb-0 w-90  hover-br nostyle">Animations<div class="line dk-blue mt-5 p-0"></div></li></a>
+        <a href="#hover"><li class=" mt-10 pb-0 w-90  hover-br nostyle">Hover<div class="line dk-blue mt-5 p-0"></div></li></a>
+        <a href="#buttons"><li class=" mt-10 pb-0 w-90  hover-br nostyle">Buttons<div class="line dk-blue mt-5 p-0"></div></li></a>
+        <a href="#table"><li class=" mt-10 pb-0 w-90  hover-br nostyle">Table<div class="line dk-blue mt-5 p-0"></div></li></a>
+        <a href="#forms"><li class=" mt-10 pb-0 w-90  hover-br nostyle">Forms<div class="line dk-blue mt-5 p-0"></div></li></a>
+        <a href="#margins"><li class= " mt-10 pb-0 w-90  hover-br nostyle">Margins<div class="line dk-blue mt-5 p-0"></div></li></a>
+        <a href="#padding"><li class=" mt-10 pb-0 w-90  hover-br nostyle">Padding<div class="line dk-blue mt-5 p-0"></div></li></a>
+        
+    </div>
+
+    <!-------------------- Main Content ------------------>
+
+    <div id="start" class="main w-70 pt-100 ml-350 left txt-black oneline center ">
+        <h1 class="title-sm txt-dk-blue">Get Start With MyStyle</h1> <br>
+        <p class="f18">MS Framework (MyStyle) is a lightweight, utility-first CSS framework designed to simplify web development with clean, responsive styles. It focuses on speed, ease of use, and customization — ideal for both beginners and rapid prototyping.</p> 
+        <br>
+        <h2>First Step</h2> <br>
+        <p class="f18">Create a new HTML file In your Root Directory/Folder (Project Folder)</p> <br>
+        <img class="w-600px rd-1 sh-1" src="../images/index.png" alt=""> <br>        
+        <h2 class="mt-40">Second Step</h2> <br>
+        <p class="f18">Copy the code below and paste it between &lt;head>&lt;/head> (Head Tag) of your HTML file</p> <br>
+        <code id="copyText" class="tr-black  br-grey txt-dk-black w-80 p-10 rd-2 left  overx-auto f16 mt-10 oneline">&lt;!-------------MyStyle FRAMEWORK------------&gt;   <br> &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Sarthak7500/MyStyle@main/mystyle.css">
+            &lt;script src="https://cdn.jsdelivr.net/gh/Sarthak7500/MyStyle@main/js/mystyle.js">&lt;/script></code>
+            <button title="Copy" class="btn-icon vt online w-60px hover-s1 h-60px anime-fade  f20 mt--40 rd-1 tr-black txt-black  br-grey"  onclick="copyText()"><i class="fa fa-clipboard"></i></button>
+
+            <img class="w-600px rd-1 sh-1 mt-40" src="../images/link.png" alt=""> <br>
+        <h2></h2>
+    </div>
+
+    <div class="line w-60  ml-350 h-3px mt-80 pc dk-blue"></div>
+
+
+    <!-------------------- Main Content ------------------>
+
+    <div id="width" class="main w-70 pt-100 ml-350 left txt-black oneline center ">
+        <h1 class="title-sm txt-dk-blue">Width</h1> <br>
+        <p class="f18">
+            MyStyle Framework provides a range of width utility classes using the .w-* format, <br>
+            allowing you to control the width of elements with ease. These classes include: <br>
+
+             <span class="mt-20 oneline"><b>Widths By Percentage (%):</b> .w-25, .w-50, .w-75, .w-100 for 25%, 50%, 75%, 100%, etc </span> <br>
+             <span class="mt-20 oneline"><b>Widths By Pixels (px):</b> .w-10px, .w-50px, .w-100px, .w-200px for 10px, 50px, 15px, 300px, etc. </span> <br>
+             <span class="mt-20 oneline"><b>Widths By Virtual Width (vw):</b> .w-10vw, .w-20vw, .w-50vw, .w-100vw for 10vw, 20vw, 50vw,  100vw, etc. </span> <br>
+
+             <img class="w-600px rd-1 sh-1 mt-40" src="../images/width.png" alt=""> <br>
+             
+        </p>
+    
+    </div>
+
+
+    <div class="line w-60  ml-350 h-3px mt-80 pc dk-blue"></div>
+
+    <!-------------------- Main Content ------------------>
+
+    <div id="height" class="main w-70 pt-100 ml-350 left txt-black oneline center ">
+        <h1 class="title-sm txt-dk-blue">Height</h1> <br>
+        <p class="f18">
+            MyStyle Framework provides a range of Height utility classes using the .h-* format, <br>
+            allowing you to control the Height of elements with ease. These classes include: <br>
+
+             <span class="mt-20 oneline"><b>Heights By Percentage (%):</b> .h-25, .h-50, .h-75, .h-100 for 25%, 50%, 75%, 100%, etc </span> <br>
+             <span class="mt-20 oneline"><b>Heights By Pixels (px):</b> .h-10px, .h-50px, .h-100px, .h-200px for 10px, 50px, 15px, 300px, etc. </span> <br>
+             <span class="mt-20 oneline"><b>Heights By Virtual Height (vh):</b> .h-10vh, .h-20vh, .h-50vh, .h-100vh for 10vh, 20vh, 50vh,  100vh, etc. </span> <br>
+
+             <img class="w-600px rd-1 sh-1 mt-40" src="../images/height.png" alt=""> <br>
+             
+        </p>
+    
+    </div>
+
+    <div class="line w-60  ml-350 h-3px mt-80 pc dk-blue"></div>
+
+     <!-------------------- Main Content ------------------>
+
+    <div  id="containers" class="h-auto main w-70 h-auto pt-100 ml-350 left txt-black oneline center ">
+        <h1 class="title-sm txt-dk-blue">Containers</h1> <br>
+        <p class="f18">
+          MyStyle Framework includes container and boxes utility classes to help structure your layouts:<br>
+
+          <h2 class="mt-40">✅ Available Container Classes</h2>
+          <ul class="mt-20 f18">
+            <li class="mt-15"><span class="grey rd-1 p-5 txt-black">.cont</span>: Full-width container with zero padding/margin — acts as a base wrapper.</li>
+            <li class="mt-15"><span class="grey rd-1 p-5 txt-black">.box</span>: A centered content block with 70% width and generous padding.</li>
+            <li class="mt-15"><span class="grey rd-1 p-5 txt-black">.box-sq-xs</span> <span class="grey rd-1 p-5 txt-black">.box-sq-sm</span> <span class="grey p-5 rd-1 txt-black">.box-sq-md</span> <span class="grey p-5 rd-1 txt-black">.box-sq-lg</span>: Square box variations from 100px to 400px wide — ideal for cards, banners.</li>
+            <li class="mt-15"><span class="grey rd-1 p-5 txt-black">.cont-rd</span>: Adds 30px border-radius with top and bottom margins — great for curved section blocks.</li>
+            <li class="mt-15"><span class="grey rd-1 p-5 txt-black">.cont-left</span> <span class="grey p-5 rd-1 txt-black">.cont-right</span>: 45% width floating containers for side-by-side layouts.</li>
+            <li class="mt-15"><span class="grey rd-1 p-5 txt-black">.cont-txt-left</span> <span class="grey p-5 rd-1 txt-black">.cont-txt-right</span>: 50% split full-height containers — perfect for hero sections or dual-column layouts.</li>
+          </ul>
+             
+        </p>
+
+      
+  <style>
+
+
+ 
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+  </style>
+
+
+  <h1 class="mt-40">More Class Reference</h1>
+
+  <table class="white mt-20 rd-4">
+    <thead>
+      <tr>
+        <th class="dk-blue rd-top-left">Class</th>
+        <th class="dk-blue rd-top-right">Purpose</th>
+      </tr>
+    </thead>
+    <tbody>
+     
+      <tr>
+        <td><span><b>.rd-1</b></span></td>
+        <td>Applies <code>border-radius: 8px</code> to the video element.</td>
+      </tr>
+      <tr>
+        <td><span><b>.rd-2</b></span></td>
+        <td>Applies <code>border-radius: 15px</code> to the video element.</td>
+      </tr>
+      <tr>
+        <td><span><b>.rd-3</b></span></td>
+        <td>Applies <code>border-radius: 20px</code> to the video element.</td>
+      </tr>
+      <tr>
+        <td><span><b>.rd-4</b></span></td>
+        <td>Applies <code>border-radius: 30px</code> to the video element.</td>
+      </tr>
+      <tr>
+        <td><span><b>.circle</b></span></td>
+        <td>Applies <code>border-radius: 50%</code> to make the video circular.</td>
+      </tr>
+      <tr>
+        <td><span><b>.rotate-30</b></span></td>
+        <td>Rotate any object to the left by 30 degrees using <code>transform: rotate(-30deg);</code> <br> You can use it for angles like: 30, 45, 60, 90, 180, 270, 360</td>
+      </tr>
+      <tr>
+        <td><span><b>.player</b></span></td>
+        <td>For adding HTML 5 video, Use it in a div in which you want to add video. </td>
+      </tr>
+      <tr>
+        <td><span><b>.player-lay</b></span></td>
+        <td>used to create a dark overlay layer on top of a video or image, <br> often for adding text or dimming the background for better readability</td>
+      </tr>
+      <tr>
+        <td><span><b>.img-collage</b></span></td>
+        <td>used to create a responsive image grid layout using CSS Grid</td>
+        </tr>
+
+        <tr>
+          <td><span><b>.player-lay-txt</b></span></td>
+          <td>used in <b>h</b> or <b>p</b> tag to center content (like text or icons) over the video,</td>
+          </tr>
+
+         
+    </tbody>
+  </table>
+
+  <img class="w-600px rd-1 sh-1 mt-40" src="../images/cont.png" alt=""> <br>
+
+  </div>
+
+
+
+  <div class="line w-60  ml-350 h-3px mt-80 pc dk-blue"></div>
+
+<!-------------------- Main Content ------------------>
+
+<div id="cards" class="main w-70 pt-100 ml-350 left txt-black oneline center ">
+  <h1 class="title-sm txt-dk-blue">How to Use Cards</h1> <br>
+  <p class="f18">
+    The .card CSS defines a flexible layout for product or content cards, supporting both stacked and split (image-text) designs. It ensures responsive images, styled text, pricing, and optional star ratings with smooth transitions.
+
+       
+  <table class="white mt-20 rd-4">
+    <thead>
+      <tr>
+        <th class="dk-blue rd-top-left">Selector</th>
+        <th class="dk-blue rd-top-right">Description / Purpose</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>.card</b></td>
+        <td>Main container for the card, displayed inline-block with a smooth transition effect (0.4s).</td>
+      </tr>
+      <tr>
+        <td><b>.card .img</b></td>
+        <td>Wrapper for the image, takes full width and auto height, no margin.</td>
+      </tr>
+      <tr>
+        <td><b>.card .img img</b></td>
+        <td>Ensures the image fills the container’s width and keeps its aspect ratio.</td>
+      </tr>
+      <tr>
+        <td><b>.card .txt</b></td>
+        <td>Text section of the card with 20px padding on top and bottom.</td>
+      </tr>
+      <tr>
+        <td><b>.card .price</b></td>
+        <td>Styles the price text with a readable font size of 18px.</td>
+      </tr>
+      <tr>
+        <td><b>.rating .star</b></td>
+        <td>Displays individual full stars for ratings inline.</td>
+      </tr>
+      <tr>
+        <td><b>.rating .half-star</b></td>
+        <td>Displays half-star icons inline for ratings.</td>
+      </tr>
+      <tr>
+        <td><b>.card .left-img</b></td>
+        <td>Used for a card layout where the image is on the left (50% width, floated left, vertically aligned top).</td>
+      </tr>
+      <tr>
+        <td><b>.card .right-txt</b></td>
+        <td>Text section placed on the right side (47% width), aligns vertically with the image using top and bottom margins.</td>
+      </tr>
+    </tbody>
+  </table>
+
+        <img class="w-800px rd-1 sh-1 mt-40" src="../images/cards.png" alt=""> <br>
+</div>
+
+<div class="line w-60  ml-350 h-3px mt-80 pc dk-blue"></div>
+
+<!-------------------- Main Content ------------------>
+
+<div id="display" class="main w-70 pt-100 ml-350 left txt-black oneline center ">
+  <h1 class="title-sm txt-dk-blue">Display</h1> <br>
+  <p class="f18">
+    The display property in CSS determines how an element is rendered in the layout flow of the document. Common values include:
+       
+    <table class="white mt-20 rd-4">
+      <thead>
+        <tr>
+          <th class="dk-blue rd-top-left">Class</th>
+          <th class="dk-blue">CSS Rule(s)</th>
+          <th class="dk-blue rd-top-right">Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>.block</td>
+          <td>display: block;</td>
+          <td>Forces the element to be block-level (full width).</td>
+        </tr>
+        <tr>
+          <td>.inline</td>
+          <td>display: inline;</td>
+          <td>Makes the element behave like inline (flows with text).</td>
+        </tr>
+        <tr>
+          <td>.inline-block</td>
+          <td>display: inline-block; vertical-align: top;</td>
+          <td>Like inline, but allows width/height; aligns top.</td>
+        </tr>
+        <tr>
+          <td>.flex</td>
+          <td>display: flex;</td>
+          <td>Enables Flexbox layout.</td>
+        </tr>
+        <tr>
+          <td>.inline-flex</td>
+          <td>display: inline-flex;</td>
+          <td>Flexbox layout that flows inline.</td>
+        </tr>
+        <tr>
+          <td>.grid</td>
+          <td>display: grid;</td>
+          <td>Enables CSS Grid layout.</td>
+        </tr>
+        <tr>
+          <td>.inline-grid</td>
+          <td>display: inline-grid;</td>
+          <td>Grid layout that flows inline.</td>
+        </tr>
+        <tr>
+          <td>.none</td>
+          <td>display: none !important;</td>
+          <td>Hides the element entirely.</td>
+        </tr>
+        <tr>
+          <td>.oneline</td>
+          <td>display: inline-block;</td>
+          <td>Keeps element inline with ability to set size (similar to .inline-block).</td>
+        </tr>
+        <tr>
+          <td>.fixed / .fx</td>
+          <td>position: fixed;</td>
+          <td>Fixes the element relative to the viewport.</td>
+        </tr>
+        <tr>
+          <td>.relative</td>
+          <td>position: relative;</td>
+          <td>Positions the element relative to its normal position.</td>
+        </tr>
+        <tr>
+          <td>.absolute</td>
+          <td>position: absolute;</td>
+          <td>Positions element relative to the nearest positioned ancestor.</td>
+        </tr>
+        <tr>
+          <td>.fx-top-left</td>
+          <td>position: fixed; left: 0px; top: 0px;</td>
+          <td>Fixes element to top-left corner.</td>
+        </tr>
+        <tr>
+          <td>.fx-top-right</td>
+          <td>position: fixed; right: 0px; top: 0px;</td>
+          <td>Fixes element to top-right corner.</td>
+        </tr>
+        <tr>
+          <td>.fx-btm-left</td>
+          <td>position: fixed; left: 0px; bottom: 0px;</td>
+          <td>Fixes element to bottom-left corner.</td>
+        </tr>
+        <tr>
+          <td>.fx-btm-right</td>
+          <td>position: fixed; right: 0px; bottom: 0px;</td>
+          <td>Fixes element to bottom-right corner.</td>
+        </tr>
+        <tr>
+          <td>.vt</td>
+          <td>vertical-align: top;</td>
+          <td>Aligns inline/inline-block elements to the top.</td>
+        </tr>
+        <tr>
+          <td>.overx-scroll</td>
+          <td>overflow-x: scroll;</td>
+          <td>Enables horizontal scrolling.</td>
+        </tr>
+        <tr>
+          <td>.overx-auto</td>
+          <td>overflow-x: auto;</td>
+          <td>Enables horizontal scrolling if content overflows.</td>
+        </tr>
+        <tr>
+          <td>.overy-auto</td>
+          <td>overflow-y: auto;</td>
+          <td>Enables vertical scrolling if content overflows.</td>
+        </tr>
+        <tr>
+          <td>.overy-scroll</td>
+          <td>overflow-y: scroll;</td>
+          <td>Forces vertical scrolling regardless of content.</td>
+        </tr>
+        <tr>
+          <td>.overx-hidden</td>
+          <td>overflow-x: hidden;</td>
+          <td>Hides horizontal overflow content.</td>
+        </tr>
+        <tr>
+          <td>.overy-hidden</td>
+          <td>overflow-y: hidden;</td>
+          <td>Hides vertical overflow content.</td>
+        </tr>
+        <tr>
+          <td>.none (Visibility)</td>
+          <td>display: none !important;</td>
+          <td>Hides the element completely.</td>
+        </tr>
+        <tr>
+          <td>.visible</td>
+          <td>display: inline-block !important;</td>
+          <td>Displays the element as inline-block.</td>
+        </tr>
+        <tr>
+          <td>.hidden</td>
+          <td>visibility: hidden !important;</td>
+          <td>Hides the element, but it still takes up space in the layout.</td>
+        </tr>
+        <tr>
+          <td>.partial</td>
+          <td>opacity: 0.5;</td>
+          <td>Sets the element's opacity to 50% (semi-transparent).</td>
+        </tr>
+      </tbody>
+    </table>
+    
+
+</div>
+
+
+<div class="line w-60  ml-350 h-3px mt-80 pc dk-blue"></div>
+
+<!-------------------- Main Content ------------------>
+
+<div id="grids" class="main w-70 pt-100 ml-350 left txt-black oneline center ">
+  <h1 class="title-sm txt-dk-blue">Grid System</h1> <br>
+  <p class="f18">
+    The grid display in CSS is a powerful layout system that allows you to create complex designs with ease. It works by dividing a container into rows and columns, enabling you to place child elements precisely within these cells.
+
+  <table class="white mt-20 rd-4">
+    <thead>
+        <tr>
+            <th class="dk-blue rd-top-left">Category</th>
+            <th class="dk-blue">Class</th>
+            <th class="dk-blue rd-top-right">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Core: Flexrow</td>
+            <td>.row</td>
+            <td>Sets the container as a flexbox with wrapping and negative margins for spacing.</td>
+        </tr>
+      
+        <tr>
+            <td>Basic Columns</td>
+            <td>.col</td>
+            <td>Flex value set to 110%, width set to 100%.</td>
+        </tr>
+        <tr>
+            <td>Basic Columns</td>
+            <td>.col-auto</td>
+            <td>Flex set to 0 auto, width set to auto.</td>
+        </tr>
+        <tr>
+            <td>Fixed Columns</td>
+            <td>.col-1</td>
+            <td>Width set to 8.333%.</td>
+        </tr>
+        <tr>
+            <td>Fixed Columns</td>
+            <td>.col-2</td>
+            <td>Width set to 16.666%.</td>
+        </tr>
+        <tr>
+            <td>Responsive Breakpoints</td>
+            <td>.col-sm-6</td>
+            <td>For screen width ≥576px, width set to 50%.</td>
+        </tr>
+        <tr>
+            <td>Responsive Breakpoints</td>
+            <td>.col-sm-4</td>
+            <td>For screen width ≥576px, width set to 33.333%.</td>
+        </tr>
+        <tr>
+            <td>Responsive Breakpoints</td>
+            <td>.col-md-6</td>
+            <td>For screen width ≥768px, width set to 50%.</td>
+        </tr>
+    </tbody>
+</table>
+
+        
+</div>
+
+<div class="line w-60  ml-350 h-3px mt-80 pc dk-blue"></div>
+
+<!-------------------- Main Content ------------------>
+
+<div id="border" class="main w-70 pt-100 ml-350 left txt-black oneline center ">
+  <h1 class="title-sm txt-dk-blue">Borders</h1> <br>
+  <p class="f18">
+    MyStyle Framework provides a range of border utility classes to help you style elements easily. These classes include:
+    </p>
+    <ul class="mt-20 f18">
+      <li class="mt-15"><span class="grey rd-1 p-5 txt-black">.br-red</span>: Add border on all side, You choose from various color option red, blue, etc.</li>
+      <li class="mt-15"><span class="grey rd-1 p-5 txt-black">.br-top-red</span>:  Add border on top side, You choose from various color option red, blue, etc.</li>
+      <li class="mt-15"><span class="grey rd-1 p-5 txt-black">.br-bottom-red</span>: Add border on bottom side, You choose from various color option red, blue, etc.</li>
+      <li class="mt-15"><span class="grey rd-1 p-5 txt-black">.br-left-red</span>: Add border on left side, You choose from various color option red, blue, etc.</li>
+      <li class="mt-15"><span class="grey rd-1 p-5 txt-black">br-right-red</span>: Add border on right side, You choose from various color option red, blue, etc.</li>
+      <li class="mt-15"><span class="grey rd-1 p-5 txt-black">.br-red-ex</span> : Add extra border on all side, You choose from various color option red, blue, etc.</li>
+    </ul>
+
+    <img class="w-800px rd-1 sh-1 mt-40" src="../images/borders.png" alt="">
+
+        
+</div>
+
+<div class="line w-60  ml-350 h-3px mt-80 pc dk-blue"></div>
+
+
+<!-------------------- Main Content ------------------>
+
+<div id="background" class="main w-70 pt-100 ml-350 left txt-black oneline center ">
+  <h1 class="title-sm txt-dk-blue">Backgrounds</h1> <br>
+  <p class="f18">
+    MyStyle Framework provides a range of background utility classes to help you style elements easily. These classes include:
+       </p>
+       <p class="mt-20">
+        <b>Background color by Name:</b> <span class="green rd-1 p-5">.green</span> <span class="red rd-1 p-5 txt-black">.red</span> <span class="blue rd-1 p-5 txt-black">.blue</span>, etc <br></p>
+        <p class="mt-20"><b>Dark Version of color:</b> <span class="dk-blue rd-1 p-5 txt-white">.dk-blue</span> <span class="dk-red rd-1 p-5">.dk-red</span> <span class="dk-green rd-1 p-5 txt-white">.dk-green</span>, etc</p>
+        <p class="mt-20"><b>Light Version of color:</b> <span class="lt-blue br-black rd-1 p-5 txt-black">.lt-blue</span> <span class="lt-red br-black rd-1 p-5">.lt-red</span> <span class="lt-green br-black rd-1 p-5 txt-green">.lt-green</span>, etc</p>
+        <p class="mt-20"><b>Neon Version of color:</b> <span class="neon-blue rd-1 p-5">.neon-blue</span> <span class="neon-red rd-1 p-5">.neon-red</span> <span class="neon-green rd-1 p-5 ">.neon-green</span>, etc,</p>
+        <p class="mt-20"><b>Opacity:</b> <span class="grey rd-1 p-5">.op-1</span>opacity: 0.2 <span class="grey rd-1 p-5">.op-2</span> opacity: 0.4 <span class="grey rd-1 p-5 ">.op-3</span> opacity: 0.6 <span class="grey rd-1 p-5 ">.op-4</span> opacity: 0.8</p>
+        <p class="mt-20"><b>Blur Background:</b> <span class="grey rd-1 p-5">.blur-1</span> blur(2px) <span class="grey rd-1 p-5">.blur-2</span> blur(5px) <span class="grey rd-1 p-5 ">.blur-3</span> blur(10px) </p>
+
+        <h2 class="mt-40">More Background Classes</h2>
+        <table class="white mt-20 rd-4">
+          <thead>
+            <tr class="dk-blue">
+              <th class="rd-top-left">Class Name</th>
+              <th class="rd-top-right">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>.trans</b></td>
+              <td>Applies a semi-transparent white background using <code>rgba(255,255,255,0.4)</code>.</td>
+            </tr>
+            <tr>
+              <td><b>.glass</b></td>
+              <td>Applies a soft light-blue/white background color <code>#f6ffff</code>, giving a mild glass look.</td>
+            </tr>
+            <tr>
+              <td><b>.tr-black</b></td>
+              <td>Applies a semi-transparent black background using <code>rgba(0,0,0,0.4)</code>.</td>
+            </tr>
+            <tr>
+              <td><b>.tr-white</b></td>
+              <td>Applies a semi-transparent white background using <code>rgba(255,255,255,0.4)</code>.</td>
+            </tr>
+            <tr>
+              <td><b>.bg-cover</b></td>
+              <td>Sets background image to cover the entire element with <code>background-size: cover</code> and no repeat.</td>
+            </tr>
+            <tr>
+              <td><b>.bg-fit</b></td>
+              <td>Ensures media or background fits the container with <code>object-fit: cover</code> and <code>background-size: cover</code>.</td>
+            </tr>
+            <tr>
+              <td><b>.bg-fixed</b></td>
+              <td>Fixes the background image during scroll using <code>background-attachment: fixed</code>.</td>
+            </tr>
+          </tbody>
+        </table>
+
+    <img class="w-600px rd-1 sh-1 mt-40" src="../images/bg.png" alt="">
+
+        
+</div>
+
+
+<div class="line w-60  ml-350 h-3px mt-80 pc dk-blue"></div>
+
+
+<!-------------------- Main Content ------------------>
+
+<div id="fonts" class="main w-70 pt-100 ml-350 left txt-black oneline center ">
+  <h1 class="title-sm txt-dk-blue">Fonts</h1> <br>
+  <p class="f18">
+    MyStyle Framework provides a range of font utility classes to help you style text easily. These classes include: <br>
+       </p>
+       <p>
+        
+       </p>
+    <ul class="mt-20 f18">
+      <li><b>Fonts Color: <span class="br-grey rd-1 p-5 txt-red">.txt-red</span> <span class="br-grey rd-1 p-5 txt-green">.txt green</span> <span class="br-grey rd-1 p-5 txt-dk-blue">.txt-dk-blue</span>,</b> etc. <br> Use any color by just adding ".txt-" before color name</li>
+ 
+      <li class="mt-15"><b>Font-Size: </b><span class="grey rd-1 p-5 txt-black">f20</span> <span class="grey rd-1 p-5 txt-black">f40</span> <span class="grey rd-1 p-5 txt-black">f60</span>,etc. Write F and then write the font-size in px (but only in even numbers) <br>
+         for eg: 2, 4, 6, 8, 10, 12 , 14, 20,.... etc. You can read <b><a class="txt-blue" href="#">fonts.css</a></b> for more info about font sizes.</li>
+     </ul>
+
+     <br>
+     <h2>More Font Classes:</h2>
+
+    <table class="white mt-20 rd-4">
+  <thead class="dk-blue">
+    <tr>
+      <th class="rd-top-left">Class</th>
+      <th>Description</th>
+      <th class="rd-top-right">Effect (Example)</th>
+    <tr>
+     
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>.txt-center</code></td>
+      <td>Aligns text to the center</td>
+      <td style="text-align: center;">Centered Text</td>
+    </tr>
+    <tr>
+      <td><b>.txt-left</code></td>
+      <td>Aligns text to the left</td>
+      <td style="text-align: left;">Left Aligned Text</td>
+    </tr>
+    <tr>
+      <td><b>.txt-right</code></td>
+      <td>Aligns text to the right</td>
+      <td style="text-align: right;">Right Aligned Text</td>
+    </tr>
+    <tr>
+      <td><b>.txt-justify</code></td>
+      <td>Justifies the text</td>
+      <td style="text-align: justify;">This is an example of justified text that adjusts spacing.</td>
+    </tr>
+    <tr>
+      <td><b>.bold</code></td>
+      <td>Makes text bold</td>
+      <td><span style="font-weight: bold;">Bold Text</span></td>
+    </tr>
+    <tr>
+      <td><b>.italic</code></td>
+      <td>Makes text italic</td>
+      <td><span style="font-style: italic;">Italic Text</span></td>
+    </tr>
+    <tr>
+      <td><b>.underline</code></td>
+      <td>Underlines text</td>
+      <td><span style="text-decoration: underline;">Underlined Text</span></td>
+    </tr>
+    <tr>
+      <td><b>.upper</code></td>
+      <td>Transforms text to UPPERCASE</td>
+      <td><span style="text-transform: uppercase;">uppercase text</span></td>
+    </tr>
+    <tr>
+      <td><b>.lower</code></td>
+      <td>Transforms text to lowercase</td>
+      <td><span style="text-transform: lowercase;">LOWERCASE TEXT</span></td>
+    </tr>
+    <tr>
+      <td><b>.capital</code></td>
+      <td>Capitalizes each word</td>
+      <td><span style="text-transform: capitalize;">capitalize each word</span></td>
+    </tr>
+  </tbody>
+</table>
+
+
+  
+        
+</div>
+
+<div class="line w-60  ml-350 h-3px mt-80 pc dk-blue"></div>
+
+<!-------------------- Main Content ------------------>
+
+<div id="fontfamily" class="main w-70 pt-100 ml-350 left txt-black oneline center ">
+  <h1 class="title-sm txt-dk-blue">Font Family</h1> <br>
+  <p class="f18">
+    MyStyle Framework have an In Build Integration with <a target="_blank" href="https://fonts.google.com/" class="txt-blue">Google Fonts</a>, MyStyle Framework provides a range of font family utility classes to help you style elements easily. You don't need to add Google Fonts link in your HTML. if you are using fonts from MyStyle Framework,  Just Directly use our font family classes. These classes include:
+  </p> <br>
+   <h2>MS Framework Font Family Classes</h2>
+<table class="white mt-20 rd-4">
+  <tr class="dk-blue">
+    <th class="rd-top-left">Class</th>
+    <th >Description</th>
+    <th class="rd-top-right">Sample Output</th>
+  </tr>
+
+  <tr><td><b>.f-monospace</td><td>Monospace font</td><td class="sample f-monospace">The quick brown fox</td></tr>
+  <tr><td><b>.f-comfortaa</td><td>Comfortaa font</td><td class="sample f-comfortaa">The quick brown fox</td></tr>
+  <tr><td><b>.f-lobster</td><td>Lobster font</td><td class="sample f-lobster">The quick brown fox</td></tr>
+  <tr><td><b>.f-afacad-flux</td><td>Afacad Flux font</td><td class="sample f-afacad-flux">The quick brown fox</td></tr>
+  <tr><td><b>.f-kablammo</td><td>Kablammo font</td><td class="sample f-kablammo">The quick brown fox</td></tr>
+  <tr><td><b>.f-rubik-vinyl</td><td>Rubik Vinyl font</td><td class="sample f-rubik-vinyl">The quick brown fox</td></tr>
+  <tr><td><b>.f-ubuntu</td><td>Ubuntu font</td><td class="sample f-ubuntu">The quick brown fox</td></tr>
+  <tr><td><b>.f-boldonse</td><td>Boldonse font</td><td class="sample f-boldonse">The quick brown fox</td></tr>
+  <tr><td><b>.f-caveat</td><td>Caveat font</td><td class="sample f-caveat">The quick brown fox</td></tr>
+  <tr><td><b>.f-darumadrop-one</td><td>Darumadrop One font</td><td class="sample f-darumadrop-one">The quick brown fox</td></tr>
+  <tr><td><b>.f-finger-paint</td><td>Finger Paint font</td><td class="sample f-finger-paint">The quick brown fox</td></tr>
+  <tr><td><b>.f-macondo</td><td>Macondo font</td><td class="sample f-macondo">The quick brown fox</td></tr>
+  <tr><td><b>.f-orbitron</td><td>Orbitron font</td><td class="sample f-orbitron">The quick brown fox</td></tr>
+  <tr><td><b>.f-allura</td><td>Allura font</td><td class="sample f-allura">The quick brown fox</td></tr>
+  <tr><td><b>.f-bebas-neue</td><td>Bebas Neue font</td><td class="sample f-bebas-neue">The quick brown fox</td></tr>
+  <tr><td><b>.f-carter-one</td><td>Carter One font</td><td class="sample f-carter-one">The quick brown fox</td></tr>
+  <tr><td><b>.f-cookie</td><td>Cookie font</td><td class="sample f-cookie">The quick brown fox</td></tr>
+  <tr><td><b>.f-lilita-one</td><td>Lilita One font</td><td class="sample f-lilita-one">The quick brown fox</td></tr>
+
+</table>
+
+
+        
+</div>
+
+<div class="line w-60  ml-350 h-3px mt-80 pc dk-blue"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

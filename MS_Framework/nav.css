@@ -1,0 +1,150 @@
+
+nav{
+    z-index: 9999;
+}
+
+.nav{
+	width: 100%;
+    transition: 0.3s ease;
+    margin-bottom: 0px;
+
+}
+.nav-80{
+    width: 100%;
+    height: 80px;
+}
+.nav-90{
+    width: 100%;
+    height: 90px;
+}
+
+.nav-60{
+    width: 100%;
+	height: 60px;
+}
+.nav-100{
+    width: 100%;
+	height: 100px;
+}
+.nav-50{
+    width: 100%;
+	height: 50px;
+}
+
+.mobile-menu{
+    width: 80%;
+    height: 100vh;
+    z-index: 10;
+    float:right;
+    position: fixed;
+    display: none;
+}
+.mobile-menu li{
+    margin-top: 30px;
+    list-style: none;
+}
+.menulay{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    display: none;
+}
+
+.ul-menu{
+	float: right;
+	margin-right: 60px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.li-menu{
+	list-style: none;
+	margin: 8px;
+	height: 32px;
+    margin-left: 30px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	display: inline-block;
+    vertical-align: top;
+
+}
+.li-menu a{
+    font-size: 24px;
+}
+
+.li-menu:hover{
+	font-size: 24px;
+	transition: 0.4s ease;
+}
+
+.li-menu-active{
+	font-size: 28px;
+	list-style: none;
+	margin: 8px;
+	width: 110px;
+	height: 32px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	display: inline-block;
+}
+
+.logo-txt{
+	font-size: 45px;
+	display: inline-block;
+	margin: 15px;
+	margin-left: 25px;
+    vertical-align:top;
+}
+.logo-txt-sub{
+    font-size: 24px;
+	display: inline-block;
+	margin: 35px;
+	margin-left: 10px;
+    vertical-align:top;
+}
+.logo-img{
+    height: 65px;
+    margin-top: 13px;
+    margin-left: 40px;
+    vertical-align: center;
+}
+.user-menu{
+    display: inline-block;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.2);
+    vertical-align: bottom;
+    margin-top: 15px;
+    margin-right: 20px;
+    position: absolute;
+    right: 40px;
+}
+
+
+
+.menu-bar{
+    float: right;
+    margin-right: 10px;
+    margin-top: 15px;
+    display: none;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 700px) {
+    .ul-menu{
+        display: none;
+    }
+    .logo-txt{
+        margin-left: 15px;
+        font-size: 30px;
+    }
+    .menu-bar{
+        display: inline-block;
+    }
+  
+}

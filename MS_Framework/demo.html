@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Sarthak7500/MyStyle@main/mystyle.css">
+  <script src="https://cdn.jsdelivr.net/gh/Sarthak7500/MyStyle@main/js/mystyle.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="lt-blue">
+
+  <div class="main">
+
+    <div class="element circle w-150px anime-float-dig h-150px dk-red mt-350 ml-100"></div>
+    <div class="element w-150px h-150px rd-4 pc anime-float-ver blue mt-300 ml-1200"></div>
+    <div class="element rombus w-200px anime-rotate-infinite-slow h-200px green mt-700 ml-100"></div>
+
+    <!------- Nav Bar------>
+
+    <nav class="nav rd-bottom fixed blur-2">
+      <a href="#" class="logo-txt bold txt-dk-blue">MyStyle</a>
+
+      <div onclick="lay(1)" class="menu-bar"><i class="fa fa-bars txt-black"></i>
+      </div>
+      
+      <ul class="ul-menu">
+        <li class="li-menu txt-dk-blue"><a href="#">Home</a></li>
+        <li class="li-menu txt-dk-blue"><a href="#">About</a></li>
+        <li class="li-menu txt-dk-blue"><a href="#">Contact</a></li>
+
+        <div class="theme-toggle-btn tr-black rd-3 br-black m-10">
+          <input type="checkbox" id="theme-toggle" class="theme-toggle " onchange="toggleTheme()" />
+          <label for="theme-toggle" class="toggle-label">
+            <span class="toggle-icon sun">🌞</span>
+            <span class="toggle-icon moon">🌙</span>
+            <span class="toggle-slider black"></span>
+          </label>
+        </div>
+
+      </ul>
+    </nav>
+
+    <div id="mobile-menu" class="mobile-menu sh-2 fx-top-right center white txt-black rd-left">
+      <ul class="ul f30 mt-200 w-100">
+        <li class="li txt-dk-blue"><a href="#">Home</a></li>
+        <li class="li txt-dk-blue"><a href="#">About</a></li>
+        <li class="li txt-dk-blue"><a href="#">Contact</a></li>
+
+        <div class="theme-toggle-btn tr-black rd-3 br-black m-40">
+          <input type="checkbox" id="theme-toggle" class="theme-toggle " onchange="toggleTheme()" />
+          <label for="theme-toggle" class="toggle-label">
+            <span class="toggle-icon sun">🌞</span>
+            <span class="toggle-icon moon">🌙</span>
+            <span class="toggle-slider black"></span>
+          </label>
+        </div>
+
+      </ul>
+    </div>
+
+    <div id = "menulay" onclick="lay(0)" class="menulay blur-1"></div>
+
+    <center>
+
+      <h1 class=" mt-150  sh-3 txt-dk-blue white f100 f-monospace w-110px h-110px p-20 oneline round anime-fadedown">v5</h1> <br>
+
+      <h1 class="anime-typewriter delay-2s f-monospace title-sm txt-dk-blue mt-40">Welcome To <br> MyStyle! </h1>
+
+      <h2 class="anime-textbytext anime-fadeup f18 w-80 txt-green" data-animate="slide-up">Redefining Web Styling for the Next Gen</h2> <br>
+
+      <a href="#"> <button class="btn dk-blue rd-3 anime-fadedown br-black txt-white sh-2 hover-up f22"><i class="fa fa-play-circle"> </i> Get Started</button></a>
+      <a href="#"> <button class="btn-br lt-blue anime-fadeup br-dk-blue rd-3 hover-up sh-2 txt-dk-blue f22"><i class="fa fa-download"> </i> Download</button></a>
+      <br>
+      <p id="copyText" onclick="copyText()" class="lt-grey hover-s1 overx-auto p-10 rd-2 sh-1 pc f20 oneline txt-black tr-black-1 mt-20 br-white w-40">https://cdn.jsdelivr.net/gh/Sarthak7500/MyStyle@main/mystyle.css
+      </p>
+
+      <button title="Copy" class="btn-icon vt w-45px hover-s1 h-45px oneline f20 pc rd-1 tr-black txt-black sh-1 br-white"  onclick="copyText()"><i class="fa fa-clipboard"></i></button>
+
+    </center>
+
+  </div>
+
+  <center>
+    <!-----------------------How To Use ----------------->
+
+    <div class="use-box  mt-150">
+      <h1 class="title-lg txt-dk-blue">How To Use</h1> <br>
+      <div class="cont-left mt-20 p-10 txt-dk-grey">
+        <h1 class="title-sm"><i class="fa fa-clipboard"></i> Paste Code</h1> <br>
+        <p class="f26 w-80">Add the following code in the head section of your html file. </p> 
+          <code class="dk-blue txt-lt-blue w-80 p-10   sh-1 overx-auto vt f20 mt-20 oneline">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Sarthak7500/MyStyle@main/mystyle.css"></code></p>
+          <code class="dk-blue txt-lt-blue w-80 p-10  sh-1 overx-auto f20 mt-20 oneline">&lt;script src="https://cdn.jsdelivr.net/gh/Sarthak7500/MyStyle@main/js/mystyle.js"></script></code></p>
+      </div>
+
+      <div class="cont-right vt mt-20 p-10 txt-dk-grey">
+        <h1 class="title-sm"><i class="fa fa-download"></i> Download</h1> <br>
+        <p class="f26 w-90">Download the latest version of MyStyle Zip File from the link below to your Root Directory and Extract it. And link mystyle.css file in the head section</p>
+        <a href="#"> <button class="btn dk-blue rd-3 anime-faderight br-black txt-white sh-2 hover-s1 f22"><i class="fa fa-download"> </i> Download</button></a>
+      </div>
+    </div>
+
+    <!------------- What's New -------------->
+
+    <div class="w-80 dk-blue txt-black p-20 h-400px pt-60 mb-80 mt-120 rd-4 sh-3">
+      <h1 class="title txt-white">What's New <span class="pc">in v5.0</span></h1> <br>
+      <div class="w-10 pc h-400px oneline"></div>
+      <ul type="disc" class="left pc txt-lt-grey f30 vt oneline">
+        <li class="m-10">Added The support for Dark Mode and Light Mode</li>
+        <li class="m-10">Added New Colors: Skyblue, Dark Blue, Dark Grey, etc.</li>
+        <li class="m-10">Added New Font Colors: Skyblue, Dark Blue, Dark Grey, etc.</li>
+        <li class="m-10">Added New Background Colors: Skyblue, Dark Blue, Dark Grey, etc.</li>
+        <li class="m-10">Changed The Complete way to use Borders: <span class="txt-green">.br-top-green</span></li>
+      </ul>
+      <ul type="disc" class="left mobile txt-lt-grey f20 ml-20 vt oneline">
+        <li class="m-10">Added The support for Dark Mode and Light Mode</li>
+        <li class="m-10">Added New Colors: Skyblue, Dark Blue, Dark Grey, etc.</li>
+        <li class="m-10">Added New Font Colors: Skyblue, Dark Blue, Dark Grey, etc.</li>
+        <li class="m-10">Added New Background Colors: Skyblue, Dark Blue, Dark Grey, etc.</li>
+        <li class="m-10">Changed The Complete way to use Borders: <span class="txt-green">.br-top-green</span></li>
+      </ul>
+    </div>
+
+  </center>
+  
+</body>
+</html>

@@ -1,0 +1,91 @@
+/* === AUTO & FULL HEIGHT === */
+.h-auto     { height: auto; }
+.h-full     { height: 100%; }
+.h-screen   { height: 100vh; }
+.h-min      { height: min-content; }
+.h-max      { height: max-content; }
+
+/* === FIXED PIXEL HEIGHTS === */
+.h-10px     { height: 10px; }
+.h-15px     { height: 15px; }
+.h-20px     { height: 20px; }
+.h-25px     { height: 25px; }
+.h-30px     { height: 30px; }
+.h-35px     { height: 35px; }
+.h-40px     { height: 40px; }
+.h-45px     { height: 45px; }
+.h-50px     { height: 50px; }
+.h-60px     { height: 60px; }
+.h-70px     { height: 70px; }
+.h-75px     { height: 75px; }
+.h-80px     { height: 80px; }
+.h-90px     { height: 90px; }
+.h-100px    { height: 100px; }
+.h-120px    { height: 120px; }
+.h-140px    { height: 140px; }
+.h-150px    { height: 150px; }
+.h-160px    { height: 160px; }
+.h-180px    { height: 180px; }
+.h-200px    { height: 200px; }
+.h-250px    { height: 250px; }
+.h-280px    { height: 280px; }
+.h-300px    { height: 300px; }
+.h-320px    { height: 320px; }
+.h-350px    { height: 350px; }
+.h-380px    { height: 380px; }
+.h-400px    { height: 400px; }
+.h-450px    { height: 450px; }
+.h-500px    { height: 500px; }
+.h-550px    { height: 550px; }
+.h-600px    { height: 600px; }
+.h-650px    { height: 650px; }
+.h-700px    { height: 700px; }
+.h-750px    { height: 750px; }
+.h-800px    { height: 800px; }
+.h-850px    { height: 850px; }
+.h-900px    { height: 900px; }
+.h-950px    { height: 950px; }
+.h-1000px   { height: 1000px; }
+
+/* === PERCENTAGE HEIGHTS === */
+.h-10       { height: 10%; }
+.h-20       { height: 20%; }
+.h-30       { height: 30%; }
+.h-40       { height: 40%; }
+.h-50       { height: 50%; }
+.h-60       { height: 60%; }
+.h-70       { height: 70%; }
+.h-75       { height: 75%; }
+.h-80       { height: 80%; }
+.h-90       { height: 90%; }
+.h-100      { height: 100%; }
+
+/* === Virtual Heights === */
+.h-10vh    { height: 10vh; }
+.h-20vh    { height: 20vh; }
+.h-30vh    { height: 30vh; }
+.h-40vh    { height: 40vh; }
+.h-50vh    { height: 50vh; }
+.h-60vh    { height: 60vh; }
+.h-70vh    { height: 70vh; }
+.h-75vh    { height: 75vh; }
+.h-80vh    { height: 80vh; }
+.h-90vh    { height: 90vh; }
+.h-100vh   { height: 100vh; }
+.h-110vh   { height: 110vh; }
+.h-120vh   { height: 120vh; }
+.h-130vh   { height: 130vh; }
+.h-100vh-90px { height: calc(100vh - 90px); }
+
+
+/* === RESPONSIVE HEIGHTS (optional) === */
+@media (min-width: 768px) {
+  .md\:h-1\/2   { height: 50%; }
+  .md\:h-100px { height: 100px; }
+  .md\:h-screen { height: 100vh; }
+}
+@media (min-width: 992px) {
+  .lg\:h-1\/2   { height: 50%; }
+  .lg\:h-100px { height: 100px; }
+  .lg\:h-screen { height: 100vh; }
+}

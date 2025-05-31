@@ -1,0 +1,126 @@
+.btn{
+	height: 50px;
+	width: 200px;
+    border: none;
+	text-align: center;
+	display: inline-block;
+	margin: 20px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    max-width: 90%;
+}
+
+.btn-rd{
+    border-radius: 30px;
+    height: 50px;
+    width: 200px;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    max-width: 90%;
+}
+
+.btn-rd1{
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    max-width: 90%;
+}
+
+.btn-rd2{
+    border-radius: 30px;
+    height: 50px;
+	width: 200px;
+    border: none;
+	text-align: center;
+	display: inline-block;
+	margin: 20px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    max-width: 90%;
+}
+
+.btn-br{
+    height: 50px;
+	width: 200px;
+	text-align: center;
+	display: inline-block;
+	margin: 20px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    max-width: 90%;
+}
+
+.btn-icon{
+    text-align: center;
+    display: inline-block;
+    margin: 20px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.btn-icon-br{
+     text-align: center;
+    display: inline-block;
+    margin: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.btn-sm{
+	height: 36px;
+	width: 135px;
+	font-size: 21px;
+	text-align: center;
+	display: inline-block;
+	margin: 10px;
+    transition: 0.4s ease;
+    cursor: pointer;
+    max-width: 90%;
+}
+
+.btn-xl{
+	height: 55px;
+	width: 277px;
+	font-size: 30px;
+	text-align: center;
+	display: inline-block;
+	margin: 20px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    max-width: 90%;
+}
+
+
+@media screen and (max-width: 700px) {
+    .btn{
+        max-width: 90%;
+    }
+    .btn-rd1{
+        max-width: 90%;
+    }
+    .btn-rd2{
+        max-width: 90%;
+    }
+    .btn-nobr{
+        max-width: 90%;
+    }
+    .btn-sm{
+        max-width: 90%;
+    }
+    .btn-xl{
+        max-width: 90%;
+    }
+    
+}

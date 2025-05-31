@@ -1,0 +1,304 @@
+.cont{
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+}
+.box{
+    width: 70%;
+    max-height: 250px;
+    padding: 40px;
+}
+.box-sq-md{
+    width: 250px;
+    max-height: 250px;
+    padding: 20px;
+}
+.box-sq-sm{
+    width: 150px;
+    max-height:  150px;
+    padding: 10px;
+}
+.box-sq-xs{
+    width: 100px;
+    max-height: 100px;
+    padding: 5px;
+}
+.box-sq-lg{
+    width: 400px;
+    max-height: 400px;
+    padding: 40px;
+}
+.cont-rd{
+	border-radius: 30px;
+	margin-top: 60px;
+	margin-bottom: 40px;
+
+}
+.cont-left{
+    width: 45%;
+    display: inline-block;
+    
+}
+.cont-right{
+    width: 45%;
+    display: inline-block;
+}
+.cont-txt-left{
+    width: 50%;
+    height: 100vh;
+    display: inline-block;
+    float: left;
+}
+
+.cont-txt-right{
+    width: 50%;
+    height: 100vh;
+    display: inline-block;
+    float: right;
+}
+.card{
+    display: inline-block;
+    transition: 0.4s ease;
+}
+.card .img{
+    width: 100%;
+    height: auto;
+    margin: 0px;
+}
+.card .img img{
+    width: 100%;
+    height: auto;
+    margin: 0px;
+}
+.card .txt{
+    padding-top:20px;
+    padding-bottom: 20px;
+    margin: 0px;
+}
+
+.card .price{
+    font-size: 18px;
+}
+
+.rating .star{
+    display: inline-block;
+}
+.rating .half-star{
+    display: inline-block;
+}
+
+.card .left-img {
+    width: 50%;
+    margin: 0px;
+    height: 100%;
+    object-fit: cover;
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+}
+.card .right-txt{
+    width: 47%;
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.fade .left-img{
+    box-shadow: 10px 10px 30px rgba(255, 255, 255, 0.8) inset;
+}
+
+/*-------------------- Video  Player ---------------------------*/
+
+.player{
+    padding: 0px;
+    position: relative;
+}
+.player video{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.player-lay-txt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+.player-lay{
+    background: rgba(0, 0, 0, 0.669);
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    z-index: 9909999;
+}
+.rd-3 video{
+    border-radius: 20px;
+}
+.rd-1 video{
+    border-radius: 8px;
+}
+.rd-2 video{
+    border-radius: 15px;
+}
+.rd-4 video{
+    border-radius: 30px;
+}
+.circle video{
+    border-radius: 50%;
+}
+
+/*-------------------- Image Collage ---------------------------*/
+.img-collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Automatically create columns */
+    grid-gap: 10px; /* Space between images */
+    justify-items: center; /* Center images within their grid items */
+   
+  }
+  
+  .img-collage img {
+    width: 100%;  /* Images fill the grid columns */
+    height: 100%; /* Fixed height */
+    object-fit: cover; /* Make sure images maintain aspect ratio */
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .img-collage img.first {
+    grid-row: span 2; /* If it's the first image, span 2 rows */
+  }
+  
+  .img-collage-diamond {
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Style for images */
+  .img-collage-diamond img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transform: rotate(45deg); /* Rotate images to create diamond shape */
+    transform-origin: center center; /* Ensure rotation occurs from the center */
+    max-width: 200px;
+    max-height: 200px;
+    transition: transform 0.5s ease;
+  }
+  .rotate-30{
+    transform: rotate(30deg);
+  }
+  .rotate-45{
+    transform: rotate(45deg);
+  }
+  .rotate-60{
+    transform: rotate(60deg);
+  }
+  .rotate-90{
+    transform: rotate(90deg);
+  }
+  .rotate-180{
+    transform: rotate(180deg);
+  }
+  .rotate-360{
+    transform: rotate(360deg);
+
+  }
+  .rotate-270{
+    transform: rotate(270deg);
+  }
+  
+  .nostyle{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    transition: 0.4s ease;
+  }
+  .sidebar-l{
+    max-width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9999;
+  }
+
+@media (max-width: 700px){
+
+    .cont{
+        width: 100%;
+        height: auto;
+        margin: 0px;
+        padding: 0px;
+        transition: 0.4s ease;
+    }
+    .box{
+        width: 70%;
+        max-height: 250px;
+        padding: 20px;
+        transition: 0.4s ease;
+    }
+    .box-sq-md{
+        width: 250px;
+        max-height: 250px;
+        padding: 10px;
+        transition: 0.4s ease;
+    }
+    .box-sq-sm{
+        width: 150px;
+        max-height:  150px;
+        padding: 7px;
+        transition: 0.4s ease;
+    }
+    .box-sq-xs{
+        width: 100px;
+        max-height: 100px;
+        padding: 5px;
+        transition: 0.4s ease;
+    }
+    .box-sq-lg{
+        width: 400px;
+        max-height: 400px;
+        padding: 10px;
+        transition: 0.4s ease;
+    }
+    
+    .cont-left{
+        width: 95%;
+        height: auto;
+        display: inline-block;
+        margin-bottom: 80px;
+        transition: 0.4s ease;
+    }
+    .cont-right{
+        width: 95%;
+        height: auto;
+        display: inline-block;
+        transition: 0.4s ease;
+    }
+    .cont-txt-left{
+        width: 95%;
+        height: auto;
+        display: inline-block;
+        transition: 0.4s ease;
+    }
+    
+    .cont-txt-right{
+        width: 95%;
+        height: auto;
+        display: inline-block;
+        transition: 0.4s ease;
+    }
+    
+}

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhinav - Portfolio</title>
+
+    <link rel="stylesheet" href="MS_Framework/style.css">
+    <script src="MS_Framework/js/script.js"></script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="lt-blue txt-black">
+
+   <style>
+
+    .ed{
+        transition: 0.4s ease-in-out;
+    }
+    .ed:hover{
+        box-shadow: 0px 0px 40px 2px rgba(153, 0, 135, 0.4);
+        transition: 0.2s ease-in-out;
+    }
+    .abimg{
+        box-shadow: 0px 0px 40px 2px rgba(153, 0, 135, 0.4);
+    }
+    .skills div:hover{
+        box-shadow: 0px 0px 40px 2px rgba(153, 0, 135, 0.4);
+        transition: 0.2s ease-in-out;
+    }
+    .cb:hover{
+        box-shadow: 0px 0px 40px 2px rgba(153, 0, 135, 0.4);
+        background: white;
+        color: purple;
+        border: 2px solid purple;
+        scale: 1.05;
+        transition: 0.4s ease-in-out;
+    }
+    
+   </style>
+
+    <script>
+        /*------------------- Theme Toggle JS ---------------------------*/
+function toggleTheme() {
+    const html = document.documentElement;
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    
+    // Set the toggle switch accordingly
+    document.getElementById('theme-toggle').checked = newTheme === 'dark';
+  }
+  
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    document.getElementById('theme-toggle').checked = savedTheme === 'dark';
+  });
+
+  /*------------------- Cursor Trail Effect ---------------------------*/
+  document.addEventListener("mousemove", function(e) {
+    const trail = document.createElement("div");
+    trail.className = "trail";
+    trail.style.left = (e.pageX - 5) + "px";
+    trail.style.top = (e.pageY - 5) + "px";
+    document.body.appendChild(trail);
+
+    setTimeout(() => {
+      trail.remove();
+    }, 600); // matches animation duration
+  });
+
+    </script>
+
+
+<div class="element square w-250px h-250px anime-rotate-infinite-slow ml-300 mt-300 green"></div>
+<div class="element circle w-250px h-250px anime-float-dig ml-800 mt-1000 green"></div>
+
+
+    <nav class="nav w-100 h-80px rd-bottom  fixed lt-2 blur-3">
+        <a href="#" class=""><h1 class="logo-txt txt-purple">AS</h1></a>
+
+        <ul class="ul-menu pc">
+            <li class="li-menu hover-br txt-purple"><a href="#about"> About</a> <div class="line h-5px purple"></div></li>
+            <li class="li-menu hover-br txt-purple"><a href="#education"> Education</a> <div class="line h-5 purple"></div></li>
+            <li class="li-menu hover-br txt-purple"><a href="#experience"> Experience</a><div class="line h-5 purple"></div></li>
+            <li class="li-menu hover-br txt-purple"><a href="#skills"> Skills</a><div class="line h-5 purple"></div></li>
+            <li class="li-menu hover-br txt-purple"><a href="#projects"> Projects</a><div class="line h-5 purple"></div></li>
+            <li class="li-menu hover-br txt-purple"><a href="#contact"> Contact</a><div class="line h-5 purple"></div></li>
+
+             <div class="theme-toggle-btn tr-black rd-3 br-black m-10">
+          <input type="checkbox" id="theme-toggle" class="theme-toggle " onchange="toggleTheme()" />
+          <label for="theme-toggle" class="toggle-label">
+            <span class="toggle-icon sun">🌞</span>
+            <span class="toggle-icon moon">🌙</span>
+            <span class="toggle-slider black"></span>
+          </label>
+        </div>
+
+        </ul>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="hero" class="w-100 h-100vh">
+        <center>
+        <div class="w-55 oneline  h-100vh">
+            <div class="txt txt-grey anime-fadeup  left mt-180">
+                <h1 class="f70">Hello I'm</h1> <br>
+                <h1 style="background: -webkit-linear-gradient(#df3fff, #000446);-webkit-background-clip: text;-webkit-text-fill-color: transparent;" class="w-100 f74 f-boldonse anime-typewriter">ABHINAV SHARMA</h1> <br>
+                <p class="f20 txt-black w-90 mt-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, dignissimos suscipit molestiae illo non commodi maiores nisi laborum aliquid.</p>
+                <a href="mailto:sathaksharma750@gmail.com"><button style="background: linear-gradient(to right, #df3fff, #000446);" class="btn rd-4 f24 sh-1 hover-up purple"><i class="fa fa-envelope"></i> Mail</button></a>
+                <a href="https://www.linkedin.com/in/abhinav-sharma-9a1b41201/"><button class="btn-br rd-4 f20 sh-1 br-purple hover-up txt-purple white"><i class="fa fa-download"></i> Download CV</button></a>
+                <a href="https://www.linkedin.com/in/abhinav-sharma-9a1b41201/"><button class="btn-icon w-50px h-50px f20 hover-up sh-1  dk-blue"><i class="fa fa-linkedin"></i></button></a>
+            </div>
+        </div>
+        <div class="w-35 h-100vh oneline vt ">
+            <img class="w-500px anime-fadeleft mt-150 sh-drop-2" src="images/pro.gif" alt="">
+        </div>
+        </center>
+
+<center>
+        <!---- About Section ------->
+
+        <div id="about" class="about w-100 pt-100">
+            <div class="cont-left">
+                <img class="w-400px mt-200 rd-4 abimg br-purple-ex" src="images/pro2.png" alt="">
+            </div>
+            <div class="cont-right vt">
+                <h1 class="title-sm txt-purple">About</h1> <br> <div class="line purple h-5px"></div>
+                <p class="f24 left mt-40 oneline">I'm currently a Master's student at the University of Texas at Arlington, where I'm majoring in Computer Science. My passion lies in the world of web development, and I love diving into projects that push the boundaries of what's possible on the web.
+<br>
+<span class="mt-20 oneline">But that's just the beginning. I'm a big fan of collecting and analyzing data. I believe in the power of AI and Machine Learning to transform data into insights that drive smarter business decisions. This fascination has fueled my aspiration to become a successful Data Scientist.</span>
+<br>
+<span class="mt-20 oneline">When I'm not buried in code or crunching numbers, you'll find me traveling to new places and sampling different cuisines. I'm a foodie at heart and love exploring the culinary delights of the world. And to balance out all those delicious meals, I hit the gym regularly and enjoy lifting weights.</span>
+<br>
+<span class="mt-20 oneline">If you're looking for someone who combines technical expertise with a zest for life, that's me! Let's connect and see how we can make amazing things happen together.</p></span>
+            </div>
+        </div>
+
+
+        <!----- Education Section ------->
+
+        <div class="edu w-100 pt-200" id="education">
+                        <h1 class="title oneline txt-purple">Education</h1> <br>
+            <div class="line purple h-5px w-200px mb-20"></div> <br>
+
+            <div class="ed w-450px oneline rd-2 left p-20 hover-s1 sh-1 white m-50">
+                <div class="i f30 p-10 oneline w-40px h-40px mt-5 purple vt rd-1"><i class="fa fa-graduation-cap f30 " aria-hidden="true"></i></div>
+                <h2 class="txt-black oneline title-sm">University  XYZ</h2> <br>
+                <span class="txt-grey">Aug 2022 - Dec 2024</span> <br>
+                <h3>Master's in Computer Science</h3>
+                <br>
+                <span class="txt-blue">3.91/4.0 CGPA</span>
+                
+            </div>
+            
+             <div class=" ed w-450px oneline rd-2 left p-20 hover-s1 sh-1 white m-50">
+                 <div class="i f30 p-10 oneline w-40px h-40px mt-5 purple vt rd-1"><i class="fa fa-graduation-cap f30 " aria-hidden="true"></i></div>
+                <h2 class="txt-black oneline title-sm">University  XYZ</h2> <br>
+                <span class="txt-grey">Aug 2022 - Dec 2024</span> <br>
+                <h3>Master's in Computer Science</h3>
+                <br>
+                <span class="txt-blue">3.91/4.0 CGPA</span>
+                
+            </div>
+
+           
+
+
+            <!------------Skills Section---------->
+
+            <div class="skills w-90 pt-100 hover-up" id="skills">
+                <h1 class="title txt-purple">Skills</h1>
+                <div class="line purple h-5px w-200px mb-20"></div> <br>
+
+                <div class="w-200px oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
+                    <img class="w-60 mt-10" src="images/py.png" alt=""> <br>
+                    <h2 class="mt-20">Python</h2>
+                </div>
+
+                <div class="w-200px oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
+                    <img class="w-60 mt-10" src="images/py.png" alt=""> <br>
+                    <h2 class="mt-20">Python</h2>
+                </div>
+
+                <div class="w-200px oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
+                    <img class="w-60 mt-10" src="images/py.png" alt=""> <br>
+                    <h2 class="mt-20">Python</h2>
+                </div>
+
+                <div class="w-200px oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
+                    <img class="w-60 mt-10" src="images/py.png" alt=""> <br>
+                    <h2 class="mt-20">Python</h2>
+                </div>
+
+                <div class="w-200px oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
+                    <img class="w-60 mt-10" src="images/py.png" alt=""> <br>
+                    <h2 class="mt-20">Python</h2>
+                </div>
+
+                <div class="w-200px oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
+                    <img class="w-60 mt-10" src="images/py.png" alt=""> <br>
+                    <h2 class="mt-20">Python</h2>
+                </div>
+
+                <div class="w-200px oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
+                    <img class="w-60 mt-10" src="images/py.png" alt=""> <br>
+                    <h2 class="mt-20">Python</h2>
+                </div>
+
+                <div class="w-200px oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
+                    <img class="w-60 mt-10" src="images/py.png" alt=""> <br>
+                    <h2 class="mt-20">Python</h2>
+                </div>
+
+                <div class="w-200px oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
+                    <img class="w-60 mt-10" src="images/py.png" alt=""> <br>
+                    <h2 class="mt-20">Python</h2>
+                </div>
+
+                <div class="w-200px oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
+                    <img class="w-60 mt-10" src="images/py.png" alt=""> <br>
+                    <h2 class="mt-20">Python</h2>
+                </div>
+                
+            </div>
+
+             <!--------------experience Section---------->
+            <div class="exp  w-100 pt-100" id="experience">
+                <h1 class="title txt-purple">Experience</h1>
+                <div class="line purple h-5px w-200px mb-20"></div> <br>
+
+                <div class=" ed w-450px oneline rd-3 left p-20 sh-1 white m-50">
+                    <div class="i f30 p-10 oneline w-40px h-40px mt-5 purple vt rd-1"><i class="fa fa-briefcase f30 " aria-hidden="true"></i></div>
+                    <h2 class="txt-black oneline title-sm">Company XYZ</h2> <br>
+                    <span class="txt-grey">Jan 2023 - Present</span> <br>
+                    <h3>Software Engineer Intern</h3>
+                    <br>
+                    <span class="txt-blue">Worked on developing web applications using React and Node.js.</span>
+                </div>
+
+                <div class="ed w-450px oneline rd-3 left p-20 sh-1 white m-50">
+                    <div class="i f30 p-10 oneline w-40px h-40px mt-5 purple vt rd-1"><i class="fa fa-briefcase f30 " aria-hidden="true"></i></div>
+                    <h2 class="txt-black title-sm oneline">Company ABC</h2> <br>
+                    <span class="txt-grey">Jan 2022 - Dec 2022</span> <br>
+                    <h3>Data Analyst Intern</h3>
+                    <br>
+                    <span class="txt-blue">Analyzed large datasets to extract insights and support business decisions.</span>
+                </div>
+
+            </div>
+
+            <!----------------Projects Section---------------->
+
+            <div class="projects w-100 pt-100" id="projects">
+                <h1 class="title txt-purple">My Projects</h1>
+                <div class="line purple h-5px w-200px mb-20"></div> <br>
+
+
+                <div class="w-400px c-pointer ed hover-s1 oneline rd-3 left p-20 sh-1 white m-50">
+                    <img class="w-100 h-250px rd-3" src="images/project.avif" alt="">
+                    <h2 class="txt-purple title-sm">Project 1</h2> <br>
+                    <span class="txt-grey">Jan 2023 - Present</span> <br>
+                    <h3>Web Application Development</h3>
+                    <br>
+                    <span class="txt-grey">Developed a full-stack web application using React, Node.js, and MongoDB.</span>
+            </div>
+
+             <div class="w-400px ed hover-s1 c-pointer oneline rd-3 left p-20 sh-1 white m-50">
+                    <img class="w-100 h-250px rd-3" src="images/project.avif" alt="">
+                    <h2 class="txt-purple title-sm">Project 1</h2> <br>
+                    <span class="txt-grey">Jan 2023 - Present</span> <br>
+                    <h3>Web Application Development</h3>
+                    <br>
+                    <span class="txt-grey">Developed a full-stack web application using React, Node.js, and MongoDB.</span>
+            </div>
+</div>
+
+
+<!---------------- Contact Section-------------->
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    html body {
+  scroll-behavior: auto;
+}
+
+    .container h1 {
+      text-align: center;
+      color: #6c63ff;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      width: 100%;
+      max-width: 480px;
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .contact-info a {
+      display: flex;
+      align-items: center;
+      color: #333;
+      text-decoration: none;
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+
+    .contact-info a svg {
+      margin-right: 10px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #f2f4f7;
+      resize: none;
+    }
+
+    form button {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #1e40af;
+    }
+
+    input:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid #7c3aed; /* purple border */
+  box-shadow: 0px 0px 20px 1px rgba(158, 0, 134, 0.4); /* purple glow */
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+
+  <h3 id="contact" class="txt-purple title-sm pt-150">Get In Touch</h3> <br>
+     <div class="line purple h-5px w-200px mb-20"></div> <br>
+
+  <div class="container mb-200 pb-150">
+    
+    <!-- Left Card -->
+    <div class="card">
+      <h2>Let's Connect</h2>
+      <p>I'm always open to collaborating on innovative IoT, AI/ML, or cybersecurity projects. Feel free to reach out!</p>
+      <div class="contact-info">
+        <a href="mailto:sarthaksharma7500gmail.com">
+          📧 example@myemail.com
+        </a>
+        <a href="https://github.com/" target="_blank">
+          🐱 github.com/example
+        </a>
+        <a href="https://linkedin.com/in/" target="_blank">
+          🔗 linkedin.com/in/example
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Card -->
+    <div class="card">
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Enter your name" required />
+        <input type="email" name="email" placeholder="Enter your email" required />
+        <textarea name="message" rows="5" placeholder="Enter your message" required></textarea>
+        <button class="purple cb" type="submit">
+          Send Message <i class="fa fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Message sent! (Functionality can be added here)");
+      this.reset();
+    });
+  </script>
+
+
+        </center>
+
+</body>
+</html

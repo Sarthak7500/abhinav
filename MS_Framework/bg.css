@@ -1,0 +1,303 @@
+
+:root{
+    --red: red;
+    --blue: rgb(0, 81, 255);
+    --green: green;
+    --yellow: rgb(255, 205, 43);
+    --black: black;
+    --white: white;
+    --grey: grey;
+    --dk-grey: rgb(44, 44, 44);
+    --skyblue: rgb(65, 201, 255);
+    --dk-blue: #0b2250;
+    --orange: orange;
+    --pink: rgb(255, 38, 74);
+    --lt-grey: rgb(226, 226, 226);
+    --brown: brown;
+    --white: white;
+    --gold: gold;
+    --orange: orange;
+    --purple: purple;
+    --lt-purple: #eec9ff;
+    --voilet: #8b5cf6;
+    --lt-voilet: #e9d8ff;
+    --lt-green: #e9fff7;
+    --lavender: #e9e7ff;
+    --lt-lavender: #f3f0ff;
+    --lt-blue: #e9f1ff;
+    --lt-red: #ffe9e9;
+    --lt-yellow: #fff2e9;
+    --lt-brown: #f5e9e9;
+    --dk-green: rgb(0, 100, 0);
+    --dk-orange: rgb(255, 100, 0);
+    --navy: rgb(0, 0, 36);
+    --dk-red: rgb(150, 0, 0);
+    --sh-1: 1px 1px 15px rgba(0,0,0,0.1);
+    --sh-2: 1px 1px 20px  rgba(0,0,0,0.2);
+    --sh-3: 1px 1px 20px  rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"]{
+    --red: red;
+    --blue: rgb(0, 81, 255);
+    --green: green;
+    --yellow: yellow;
+    --black: rgb(255, 255, 255);
+    --white: rgb(0, 0, 0);
+    --grey: rgb(56, 56, 56);
+    --dk-grey: rgb(176, 176, 176);
+    --skyblue: rgb(0, 86, 121);
+    --dk-blue: #c1d8ff;
+    --orange: orange;
+    --pink: pink;
+    --lt-grey: rgb(33, 33, 33);
+    --brown: brown;
+    --gold: gold;
+    --orange: orange;
+    --purple: rgb(170, 0, 170);
+    --lt-purple: #12021a;
+    --voilet: #8b5cf6;
+    --lt-voilet: #4800a6;
+    --lt-green: #e9fff7;
+    --lavender: #e9e7ff;
+    --lt-lavender: #f3f0ff;
+    --lt-blue: #010713;
+    --lt-red: #0d0101;
+    --lt-yellow: #0e0c01;
+    --lt-brown: #120101;
+    --dk-green: rgb(204, 255, 204);
+    --dk-orange: rgb(255, 221, 198);
+    --navy: rgb(208, 208, 255);
+    --dk-red: rgb(255, 114, 114);
+    --sh-1: 1px 1px 15px rgba(255, 255, 255, 0.1);
+    --sh-2: 1px 1px 15px  rgba(255, 255, 255, 0.2);
+    --sh-3: 1px 1px 20px  rgba(255, 255, 255, 0.3);
+}
+
+
+  /* ------------------ Background -----------------------------*/
+
+
+
+.red{
+	background: var(--red);
+	color: var(--white);
+}
+
+.blue{
+	color: var(--white);
+  background: var(--blue);
+}
+
+.green{
+	background: var(--green);
+	color: var(--white);
+}
+
+.yellow{
+	background: var(--yellow);
+	color: var(--red);
+}
+
+.black{
+	background: var(--black);
+	color: var(--white);
+}
+
+.white{
+	background: var(--white);
+	color: var(--black);
+}
+
+.grey{
+	background: var(--grey);
+}
+.dk-grey{
+    background: var(--dk-grey);
+}
+
+.skyblue{
+	background: var(--skyblue);
+	color: var(--black);
+}
+
+.dk-blue{
+	background: var(--dk-blue);
+	color: var(--white);
+}
+.orange{
+    background: var(--orange);
+}
+
+.pink{
+	background: var(--pink);
+}
+.lt-grey{
+	background: var(--lt-grey);
+}
+.brown{
+	background: var(--brown);
+    color: var(--white);        
+
+}.gold{
+	background: var(--gold);
+}
+.orange{
+        background: var(--orange);
+}
+.purple{
+        background: var(--purple);
+        color: var(--white);
+}
+.lt-purple{
+	background: var(--lt-purple);
+}
+.voilet{
+        background: var(--voilet);
+        color: var(--white);
+}
+.lt-voilet{
+    background: var(--lt-voilet);
+}
+.lt-green{
+	background: var(--lt-green);
+}
+.lt-blue{
+    background: var(--lt-blue);
+}
+.lt-red{
+    background: var(--lt-red);
+}
+.lt-yellow{
+    background: var(--lt-yellow);
+}
+.lt-brown{
+    background: var(--lt-brown);
+}
+.dk-green{
+    background: var(--dk-green);
+}
+.dk-orange{
+    background: var(--dk-orange);
+}
+.dk-red{
+    background: var(--dk-red);
+    color: var(--white);
+}
+
+
+.lavender{
+    background: var(--lavender);
+}
+.lt-lavender{
+    background: var(--lt-lavender);
+}
+
+.navy{
+    background: rgb(0, 0, 33);
+    color: white;
+}
+
+.red-blue{
+    background: linear-gradient(to bottom right, red, blue);
+    color: white;
+}
+.blue-red{
+    background: linear-gradient(to bottom right, blue, red);
+    color: white;
+}
+.rcb{
+    background: linear-gradient(to bottom right, rgb(22, 1, 86), rgb(130, 1, 1), rgb(75, 0, 0));
+}
+
+.trans{
+	background: rgba(255,255,255,0.4);
+}
+.glass{
+	background: #f6ffff;
+}
+.tr-black{
+    background: rgba(0,0,0,0.4);
+}
+.tr-black-1{
+    background: rgba(0,0,0,0.4);
+}
+.tr-black-2{
+    background: rgba(0,0,0,0.6);
+}
+.tr-black-3{
+    background: rgba(0,0,0,0.8);
+}
+.tr-white{
+    background: rgba(255,255,255,0.4);
+}
+.tr-white-1{
+    background: rgba(255,255,255,0.2);
+}
+.tr-white-2{
+    background: rgba(255,255,255,0.4);
+}
+.tr-white-3{
+    background: rgba(255,255,255,0.6);
+}
+.tr-white-4{
+    background: rgba(255,255,255,0.8);
+}
+
+/*---------- Neon Bg ------------*/
+
+.neon-green{
+    background: #39FF14;
+}
+.neon-blue{
+    background: #14B9FF;
+}
+.neon-red{
+    background: #FF0014;
+}
+.neon-yellow{
+    background: #E0E722;
+}
+.neon-white{
+    background: #FFFFFF;
+}
+
+/*---------- Background Images ------------------*/
+
+.bg-cover{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg-fit{
+    object-fit: cover;
+    background-size: cover
+}
+.bg-fixed{
+    background-attachment: fixed;
+}
+
+/*-----opacity-----*/
+
+.op-1{
+	opacity: 0.2;
+}
+.op-2{
+	opacity: 0.4;
+}
+.op-3{
+	opacity: 0.6;
+}
+.op-4{
+	opacity: 0.8;
+}
+
+/*-------------- Blur Bcakground------------------*/
+.blur-1{
+    backdrop-filter: blur(2px);
+}
+.blur-2{
+    backdrop-filter: blur(5px);
+}
+.blur-3{
+    backdrop-filter: blur(10px);
+}

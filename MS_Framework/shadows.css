@@ -1,0 +1,85 @@
+/*-----------box-sadows---------*/
+
+.sh-0{
+	box-shadow: none;
+}
+.sh-low{
+	box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.1);
+}
+
+.sh-1{
+    box-shadow: var(--sh-1);
+}
+.sh-2{
+    box-shadow: var(--sh-2);
+}
+.sh-3{
+    box-shadow: var(--sh-3);
+}
+
+.sh-black-1{
+	box-shadow: 1px 1px 20px  rgba(0,0,0,0.2);
+}
+.sh-black-2{
+	box-shadow: 1px 1px 20px rgba(0,0,0,0.3);
+}
+.sh-black-3{
+	box-shadow: 2px 2px 15px rgba(0,0,0,0.4);
+}
+.sh-black4-{
+	box-shadow: 1px 1px 15px rgba(0,0,0,0.6);
+}      
+.sh-black-5{
+    box-shadow: 1px 1px 20px rgba(0,0,0,0.8);
+}
+.sh-white{
+    box-shadow: 1px 1px 20px  rgba(255,255,255,0.1);
+}
+.sh-white-1{
+    box-shadow: 1px 1px 20px  rgba(255,255,255,0.1);
+}
+.sh-white-2{
+    box-shadow: 1px 1px 20px  rgba(255,255,255,0.2);
+}
+.sh-white-3{
+    box-shadow: 1px 1px 20px  rgba(255,255,255,0.3);
+}
+.sh-white-4{
+    box-shadow: 1px 1px 20px  rgba(255,255,255,0.4);
+}
+
+/* --------------- inset shadows ----------------*/
+
+.sh-inset-1{
+    box-shadow: inset 1px 1px 10px rgba(0,0,0,0.1);
+}
+.sh-inset-2{
+    box-shadow: inset 1px 1px 20px rgba(0,0,0,0.2);
+}
+.sh-inset-3{
+    box-shadow: inset 1px 1px 20px rgba(0,0,0,0.3);
+}
+.sh-inset-4{
+    box-shadow: inset 2px 2px 15px rgba(0,0,0,0.4);
+}
+.sh-inset-5{
+    box-shadow: inset 1px 1px 15px rgba(0,0,0,0.6);
+}      
+.sh-inset-6{
+    box-shadow: inset 1px 1px 20px rgba(0,0,0,0.8);
+}
+
+/*------- Drop Shadow -------------------------*/
+
+.sh-drop-1{
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.2));
+}
+.sh-drop-2{
+    filter: drop-shadow(2px 2px 15px rgba(0,0,0,0.3));
+}
+.sh-drop-3{
+    filter: drop-shadow(2px 2px 15px rgba(0,0,0,0.4));
+}
+.sh-drop-4{
+    filter: drop-shadow(0px 0px 20px rgba(0,0,0,0.5));
+}
