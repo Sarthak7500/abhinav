@@ -35,6 +35,52 @@
         scale: 1.05;
         transition: 0.4s ease-in-out;
     }
+    .htxt{
+      width: 55%;
+    }
+
+    @media only screen and (max-width: 768px) {
+      
+        .htxt{
+          width: 99%;
+          scale: 0.8;
+          margin: 0px;
+          height: auto;
+        }
+        .f74{
+          font-size: 35px;
+        }
+
+        .about{
+          padding-top: 0px;
+          margin-top: -100px;
+        }
+
+        .abimg{
+          width: 90%;
+          scale: 0.8;
+        }
+        .abimg img{
+          width: 80%;
+        }
+        .abtxt{
+          width: 90%;
+        }
+        .sk{
+          width: 150px;
+          margin: 10px;
+          height: 170px;
+        }
+        .sk img{
+          width: 70px;
+        }
+        .ed{
+          width: 90%;
+          margin: 0px;
+          margin-top: 30px;
+        }
+       
+    }
     
    </style>
 
@@ -73,12 +119,15 @@ function toggleTheme() {
     </script>
 
 
-<div class="element square w-250px h-250px anime-rotate-infinite-slow ml-300 mt-300 green"></div>
-<div class="element circle w-250px h-250px anime-float-dig ml-800 mt-1000 green"></div>
+<div class="element pc square w-250px h-250px anime-rotate-infinite-slow ml-300 mt-300 green"></div>
+<div class="element pc circle w-250px h-250px anime-float-dig ml-800 mt-1000 green"></div>
 
 
     <nav class="nav w-100 h-80px rd-bottom  fixed lt-2 blur-3">
         <a href="#" class=""><h1 class="logo-txt txt-purple">AS</h1></a>
+
+       
+      </div>
 
         <ul class="ul-menu pc">
             <li class="li-menu hover-br txt-purple"><a href="#about"> About</a> <div class="line h-5px purple"></div></li>
@@ -98,12 +147,15 @@ function toggleTheme() {
         </div>
 
         </ul>
+
+
     </nav>
+
     
     <!-- Hero Section -->
     <section id="hero" class="w-100 h-100vh">
         <center>
-        <div class="w-55 oneline  h-100vh">
+        <div class=" htxt oneline  h-100vh">
             <div class="txt txt-grey anime-fadeup  left mt-180">
                 <h1 class="f70">Hello I'm</h1> <br>
                 <h1 style="background: -webkit-linear-gradient(#df3fff, #000446);-webkit-background-clip: text;-webkit-text-fill-color: transparent;" class="w-100 f74 f-boldonse anime-typewriter">ABHINAV SHARMA</h1> <br>
@@ -112,8 +164,8 @@ function toggleTheme() {
                 <a href="https://www.linkedin.com/in/abhinav-sharma-9a1b41201/"><button class="btn-br rd-4 f20 sh-1 br-purple hover-up txt-purple white"><i class="fa fa-download"></i> Download CV</button></a>
                 <a href="https://www.linkedin.com/in/abhinav-sharma-9a1b41201/"><button class="btn-icon w-50px h-50px f20 hover-up sh-1  dk-blue"><i class="fa fa-linkedin"></i></button></a>
             </div>
-        </div>
-        <div class="w-35 h-100vh oneline vt ">
+        </div> <br class="mobile">
+        <div class="w-35 himg h-100vh oneline vt pc">
             <img class="w-500px anime-fadeleft mt-150 sh-drop-2" src="images/pro.gif" alt="">
         </div>
         </center>
@@ -125,7 +177,7 @@ function toggleTheme() {
             <div class="cont-left">
                 <img class="w-400px mt-200 rd-4 abimg br-purple-ex" src="images/pro2.png" alt="">
             </div>
-            <div class="cont-right vt">
+            <div class="cont-right abtxt vt">
                 <h1 class="title-sm txt-purple">About</h1> <br> <div class="line purple h-5px"></div>
                 <p class="f24 left mt-40 oneline">I'm currently a Master's student at the University of Texas at Arlington, where I'm majoring in Computer Science. My passion lies in the world of web development, and I love diving into projects that push the boundaries of what's possible on the web.
 <br>
@@ -173,52 +225,52 @@ function toggleTheme() {
                 <h1 class="title txt-purple">Skills</h1>
                 <div class="line purple h-5px w-200px mb-20"></div> <br>
 
-                <div class="w-200px oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
+                <div class="w-200px sk oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
                     <img class="w-60 mt-10" src="images/py.png" alt=""> <br>
                     <h2 class="mt-20">Python</h2>
                 </div>
 
-                <div class="w-200px oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
+                <div class="w-200px sk oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
                     <img class="w-60 mt-10" src="images/py.png" alt=""> <br>
                     <h2 class="mt-20">Python</h2>
                 </div>
 
-                <div class="w-200px oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
+                <div class="w-200px sk oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
                     <img class="w-60 mt-10" src="images/py.png" alt=""> <br>
                     <h2 class="mt-20">Python</h2>
                 </div>
 
-                <div class="w-200px oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
+                <div class="w-200px sk oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
                     <img class="w-60 mt-10" src="images/py.png" alt=""> <br>
                     <h2 class="mt-20">Python</h2>
                 </div>
 
-                <div class="w-200px oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
+                <div class="w-200px sk oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
                     <img class="w-60 mt-10" src="images/py.png" alt=""> <br>
                     <h2 class="mt-20">Python</h2>
                 </div>
 
-                <div class="w-200px oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
+                <div class="w-200px sk oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
                     <img class="w-60 mt-10" src="images/py.png" alt=""> <br>
                     <h2 class="mt-20">Python</h2>
                 </div>
 
-                <div class="w-200px oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
+                <div class="w-200px sk oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
                     <img class="w-60 mt-10" src="images/py.png" alt=""> <br>
                     <h2 class="mt-20">Python</h2>
                 </div>
 
-                <div class="w-200px oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
+                <div class="w-200px sk oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
                     <img class="w-60 mt-10" src="images/py.png" alt=""> <br>
                     <h2 class="mt-20">Python</h2>
                 </div>
 
-                <div class="w-200px oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
+                <div class="w-200px sk oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
                     <img class="w-60 mt-10" src="images/py.png" alt=""> <br>
                     <h2 class="mt-20">Python</h2>
                 </div>
 
-                <div class="w-200px oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
+                <div class="w-200px sk oneline hover-up h-200px p-10 rd-3 white m-20 sh-1">
                     <img class="w-60 mt-10" src="images/py.png" alt=""> <br>
                     <h2 class="mt-20">Python</h2>
                 </div>
